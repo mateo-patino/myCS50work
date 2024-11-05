@@ -1,0 +1,14 @@
+sort1 uses: Bubble sort
+
+How do you know?: In the worst case scenario (a reversed array), it has the highest running time among the three. It's also the slowest
+algorithm with a random array as the last video on lecture 3 showed (which allows it to be distinguished from selection sort).
+
+sort2 uses: merge sort
+
+How do you know?: As we saw in lecture, merge sort has the lowest running time across all array categories (reversed, sorted, and random).
+It's running time doesn't change much when the algorithm is tried on different types of arrays, which is consistent with its complexity of Theta(nlogn)
+
+sort3 uses: Selection sort
+
+How do you know?: It's running time doesn't change significantly when used on different arrays, reflecting its Theta(n2) complexity. It's also the second-slowest algorithm,
+behind bubble sort, which is consistent with the demonstration we saw in lecture. 

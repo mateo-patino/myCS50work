@@ -1,0 +1,6 @@
+1. This person has an average energy of 0.65906, an average danceability of 0.71646 and an average valence of 0.484443. The energy of this person's playlist
+does not indicate a particular mood as 0.65 is around in the upper middle of the max energy value (0.91) and the lowest energy value (0.296). Person's pretty aight.
+
+2. This method does not consider the meaning of the lyrics of each song but only the phonetics-related metrics. A song could be very slow, which would indicate
+the person's calmed and easy, but have very violent, dark or negative lyrics which would contradict an easy and calmed behavior and suggest an aggresive or
+depressive one. This is one example of how this system could be flawed. 

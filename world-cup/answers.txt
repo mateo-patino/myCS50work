@@ -1,0 +1,19 @@
+Times:
+
+10 simulations: 0m0.029s(record time using 0m0.000s format)
+100 simulations: 0m0.028s (record time using 0m0.000s format)
+1000 simulations: 0m0.037s (record time using 0m0.000s format)
+10000 simulations: 0m0.101s (record time using 0m0.000s format)
+100000 simulations: 0m1.141s (record time using 0m0.000s format)
+1000000 simulations: 0m7.594s (record time using 0m0.000s format)
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+
+The chance of winning of a specific team did not converge on a particular floating point value as we ran more simulations. I thought that the greater accuracy
+due to more simulations would be reflected in the convergence of the chance of winning for some if not all teams. This did not prove true.
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?: It would depend on the fee charged of course, but I'd say everything above 100 thousand
+simulations is good enough in a probabilistic sense. 
