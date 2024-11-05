@@ -1,0 +1,116 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.button {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.buy_field {
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.buy_cash {
+    font-weight: bolder;
+    font-size: 16pt;
+}
+
+#table_head {
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr.separator {
+    border-top: 2px solid #000;
+}
+
+.confirm_btn {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.text_container_right {
+    margin-right: 300px;
+    margin-left: 160px;
+    font-weight: bolder;
+    font-size: 16pt;
+}
+
+.text_container_left {
+    margin-right: 160px;
+    margin-left: 300px;
+    font-weight: bolder;
+    font-size: 16pt;
+}
+
+.element_container {
+    display: flex;
+    align-items: center;
+}
+
+#index_portfolio {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.header {
+    font-weight: bolder;
+    font-size: 12pt;
+}
+
+.empty_index {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+#share_number_sell {
+    margin-right: 15pt;
+    margin-left: 15pt;
+    margin-bottom: 20pt;
+}
+
+.sell_form {
+    margin-top: 25pt;
+    margin-bottom: 15pt;
+}
+
+.history_header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

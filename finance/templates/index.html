@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="element_container">
+        <div class="text_container_left">
+            Your cash: ${{ cash }}
+        </div>
+        <div class="text_container_right">
+            Your total balance: ${{ grand_balance }}
+        </div>
+    </div>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td class="header">Stock</td>
+                <td class="header">Number of purchases</td>
+                <td class="header">Total shares</td>
+                <td class="header">Current share price</td>
+                <td class="header">Current total value</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in stock_list %}
+                <tr>
+                    <td>{{ s.stock }}</td>
+                    <td>{{ s.purchase_num }}</td>
+                    <td>{{ s.share_num }}</td>
+                    <td>${{ s.csp }}</td>
+                    <td>${{ s.ctv }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div id="index_portfolio">
+        Your stock portfolio balance: ${{ balance }}
+    </div>
+{% endblock %}

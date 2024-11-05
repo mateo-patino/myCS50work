@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <div>
+        <h3>Confirm your purchase</h3>
+    </div>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Shares</th>
+                <th>Unit price</th>
+                <th>Net price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ symbol }}</td>
+                <td>{{ shares }}</td>
+                <td>${{ unit_price }}</td>
+                <td>${{ net_price }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <form class="confirm_btn" action="/confirm" method="POST ">
+            <input name="confirm_submit" type="submit" value="Confirm">
+        </form>
+        <button class="confirm_btn" onclick="back()">Go back</button>
+    </div>
+    <script>
+        function back() {
+            window.history.back();
+        }
+    </script>
+{% endblock %}

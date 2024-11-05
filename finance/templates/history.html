@@ -1,0 +1,62 @@
+{% extends "layout.html"%}
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <p class="empty_index">All the transactions (sales and purchases) are outlined below.</p>
+    <div class="history_table_container">
+        <hr>
+        <h4 class="history_header">Purchases</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th class="header">Stock</th>
+                    <th class="header">Shares bought</th>
+                    <th class="header">Share price</th>
+                    <th class="header">Net price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for purchase in purchase_list %}
+                    <tr>
+                        <td>{{ purchase.stock }}</td>
+                        <td>{{ purchase.shares }}</td>
+                        <td>${{ purchase.share_price }}</td>
+                        <td>${{ purchase.net_price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+        <h4 class="history_header">Sales</h4>
+        <table>
+            <thead>
+                <th class="header">Stock</th>
+                <th class="header">Shares sold</th>
+                <th class="header">Share price</th>
+                <th class="header">Profit</th>
+            </thead>
+            <tbody>
+                {% for sale in sales_list %}
+                    <tr>
+                        <td>{{ sale.stock }}</td>
+                        <td>{{ sale.shares }}</td>
+                        <td>${{ sale.share_price }}</td>
+                        <td>${{ sale.profit }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <script>
+            // Your long decimal number
+            var longDecimal = 12.3456789;
+
+            // Format to two decimal places
+            var formattedNumber = longDecimal.toFixed(2);
+
+            // Display the formatted number in the HTML
+            document.getElementById("formattedNumber").textContent = formattedNumber;
+        </script>
+    </div>
+{% endblock %}

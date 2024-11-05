@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    A share of {{ name }} (NASDAQ:{{ symbol }}) is worth ${{ price }}.
+    <div class="button">
+        <form action="/quote" method="GET">
+            <input name="return_to_quote" type="submit" value="Search another quote">
+        </form>
+    </div>
+{% endblock %}

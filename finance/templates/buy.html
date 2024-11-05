@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <hr>
+    <div class="buy_cash">
+        Your cash: ${{ cash }}
+    </div>
+    <hr>
+    <form action="/buy" method="POST">
+        <input class="buy_field" name="symbol" type="text" placeholder="Enter company symbol" required>
+        <input class="buy_field" name="shares" type="number" placeholder="Enter number of shares" required>
+        <input name="submit_purchase" type="submit" value="Continue">
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <p class="empty_index">Sell shares of a particular stock. Your profit will be stored in your cash balance.</p>
+    <div class="sell_form">
+        <form action="/sell" method="POST">
+            <select name="symbol" action="/sell" method="POST">
+                <option name="disabled_opt" selected disabled>Select stock</option>
+                {% for s in stocks_owned %}
+                <option value="{{ s }}">{{ s }}</option>
+                {% endfor %}>
+            </select>
+            <input id="share_number_sell" name="shares" type="number" placeholder="Number of shares" required>
+            <input name="submit" type="submit" value="Sell">
+        </form>
+    </div>
+{% endblock %}

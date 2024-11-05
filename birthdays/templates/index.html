@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <form action="/" method="POST">
+                    <input name="name" type="text" placeholder="Name" required>
+                    <input name="month" type="number" placeholder="Month" required>
+                    <input name="day" type="number" placeholder="Day" required>
+                    <input name="submit" type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday (month/day)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for dict in birthdays %}
+                            <tr>
+                                <td>{{ dict.name }}</td>
+                                <td>{{ dict.month }} / {{ dict.day }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
